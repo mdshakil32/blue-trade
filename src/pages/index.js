@@ -20,7 +20,7 @@ const CandleChart = dynamic(() => import("../components/Charts/CandleChart"), {
 });
 
 import { useState } from "react";
-import DarkModeButton from "@/components/DarkModeButton";
+
 import Topbar from "@/components/Navigation/Topbar";
 
 const Home = () => {

@@ -4,7 +4,7 @@ import NotificationSVG from "../SVG/NotificationSVG";
 import ThreeDotSVG from "../SVG/ThreeDotSVG";
 import { useDetectClickOutside } from "react-detect-click-outside";
 import { useTheme } from "next-themes";
-import DarkModeButton from "../DarkModeButton";
+
 import Link from "next/link";
 import NotificationDarkSVG from "../SVG/NotificationDarkSVG";
 import DarkModeToggle from "react-dark-mode-toggle";

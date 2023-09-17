@@ -9,7 +9,6 @@ import EyeSVG from "@/components/SVG/EyeSVG";
 import BitcoinSVG from "@/components/SVG/BitcoinSVG";
 import EthereumSVG from "@/components/SVG/EthereumSVG";
 import SolanaSVG from "@/components/SVG/SolanaSVG";
-import DarkModeButton from "./DarkModeButton";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -10,7 +10,7 @@ const MainLogoDarkSVG = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_47_925)">
+        <g clipPath="url(#clip0_47_925)">
           <path
             d="M51.2087 0.922607H71.5076L53.9767 30.4484H33.6777L51.2087 0.922607Z"
             fill="#4690EF"

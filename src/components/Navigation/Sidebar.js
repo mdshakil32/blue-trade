@@ -8,7 +8,7 @@ import ProfileSVG from "../SVG/ProfileSVG";
 import SettingsSVG from "../SVG/SettingsSVG";
 import HelpSVG from "../SVG/HelpSVG";
 import LogoutSVG from "../SVG/LogoutSVG";
-import DarkModeButton from "../DarkModeButton";
+
 import MainLogoDarkSVG from "../SVG/MainLogoDarkSVG";
 
 import { useDetectClickOutside } from "react-detect-click-outside";

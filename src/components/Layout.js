@@ -5,7 +5,7 @@ import Sidebar from "./Navigation/Sidebar";
 import { useState } from "react";
 
 import { Inter } from "next/font/google";
-import DarkModeButton from "./DarkModeButton";
+
 import dynamic from "next/dynamic";
 const inter = Inter({ subsets: ["latin"] });
 
