@@ -318,13 +318,16 @@ const CandleChart = () => {
 
   const marketList = ["1H", "3H", "5H", "1D", "1W", "1M"];
   const [selectedMarket, setSelectedMarket] = useState("1H");
+  const handleMarketType = (name) => {
+    setSelectedMarket(name);
+  };
   return (
     <div
       data-aos="zoom-in"
       data-aos-delay="500"
       className="bg-white dark:bg-[#1C1C25]  rounded-xl p-5 min-h-[465px] overflow-hidden"
     >
-      <div className="grid grid-cols-2">
+      <div className="grid md:grid-cols-2 grid-cols-1">
         <div>
           <div className="max-w-[330px] px-4 py-2 dark:bg-[#131313] bg-[#F2F8FF] rounded-xl  grid grid-cols-2">
             <div>
@@ -348,7 +351,7 @@ const CandleChart = () => {
           </div>
         </div>
         <div>
-          <div className="flex items-center justify-end flex-wrap">
+          <div className="flex items-center md:justify-end flex-wrap my-4 md:my-0">
             {marketList.map((name, index) => (
               <button
                 key={index}
