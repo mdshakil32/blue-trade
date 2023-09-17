@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Chart from "react-apexcharts";
 import { useTheme } from "next-themes";
+import DownArrowSVg from "../SVG/DownArrowSVg";
 
 const CandleChart = () => {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -315,17 +316,56 @@ const CandleChart = () => {
     ],
   };
 
+  const marketList = ["1H", "3H", "5H", "1D", "1W", "1M"];
+  const [selectedMarket, setSelectedMarket] = useState("1H");
   return (
     <div
       data-aos="zoom-in"
       data-aos-delay="500"
       className="bg-white dark:bg-[#1C1C25]  rounded-xl p-5 min-h-[465px] overflow-hidden"
     >
-      <div className="px-4 py-2 dark:bg-[#131313] rounded-xl w-fit">
-        <h1 className=" text-xl font-semibold dropShadow">BTCUSDT</h1>
-        <p className=" text-[13px] text-[#626D7D] font-medium">Bitcoin</p>
-        <div></div>
+      <div className="grid grid-cols-2">
+        <div>
+          <div className="max-w-[330px] px-4 py-2 dark:bg-[#131313] bg-[#F2F8FF] rounded-xl  grid grid-cols-2">
+            <div>
+              <h1 className=" text-xl font-semibold dropShadow">BTCUSDT</h1>
+              <p className=" text-[13px] text-[#626D7D] font-medium">Bitcoin</p>
+            </div>
+
+            <div className="flex items-center justify-end space-x-2">
+              <div>
+                <h1 className=" text-lg font-semibold">$23,780</h1>
+                <div className="flex  justify-center">
+                  <p className="w-fit text-[#219653] text-[11px] font-semibold bg-[#21965333] rounded-full text-center py-1 px-2">
+                    +14.67%
+                  </p>
+                </div>
+              </div>
+              <div>
+                <DownArrowSVg />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="flex items-center justify-end flex-wrap">
+            {marketList.map((name, index) => (
+              <button
+                key={index}
+                onClick={() => handleMarketType(name)}
+                className={` ${
+                  selectedMarket === name
+                    ? "bg-[#F2F8FF]  dark:bg-[#131313] text-[#0060FF] "
+                    : " bg-[#F8F8F9] dark:bg-[#131313]"
+                } mr-1 my-1 text-xs font-semibold  px-2.5 py-1.5 rounded-lg  hover:bg-[#F2F8FF]  hover:text-[#0060FF] duration-200 select-none`}
+              >
+                {name}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
+
       <Chart
         options={state.options}
         series={state.series}
