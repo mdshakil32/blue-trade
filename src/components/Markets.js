@@ -76,7 +76,6 @@ const Markets = () => {
   };
 
   const router = useRouter();
-  console.log(router);
 
   return (
     <div>
