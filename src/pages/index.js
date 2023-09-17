@@ -22,11 +22,25 @@ const CandleChart = dynamic(() => import("../components/Charts/CandleChart"), {
 import { useState } from "react";
 
 import Topbar from "@/components/Navigation/Topbar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   return (
     <div className="overflow-hidden">
       {/* ===== top section ===== */}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
 
       <Balance />
       {/* ===== bottom section ===== */}

@@ -7,6 +7,7 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import ThreeDotSVG from "../SVG/ThreeDotSVG";
 import ThreeDotButton from "../SVG/ThreeDotButton";
+import ThreeDotsSVG2 from "../SVG/ThreeDotsSVG2";
 
 const PieChart = () => {
   const router = useRouter();
@@ -87,8 +88,13 @@ const PieChart = () => {
 
         <div className="flex items-start justify-between">
           <h1 className=" text-xl font-semibold">Assets</h1>
-          <button className="hover:shadow-lg duration-200 rounded-[6px] w-fit ">
-            <ThreeDotButton />
+
+          <button className="dropShadow select-none">
+            <div className="group select-none flex items-center justify-center space-x-1 dropShadow border border-[#7f8a9bd0] rounded-md w-[34px] h-[26px] hover:bg-[#6b64fc]  hover:border-[#6b64fc]  duration-200 ">
+              <p className="group-hover:bg-white select-none w-[3px] h-[3px] bg-[#7f8a9bd0] rounded-full "></p>
+              <p className="group-hover:bg-white select-none w-[3px] h-[3px] bg-[#7f8a9bd0] rounded-full "></p>
+              <p className="group-hover:bg-white select-none w-[3px] h-[3px] bg-[#7f8a9bd0] rounded-full"></p>
+            </div>
           </button>
         </div>
 

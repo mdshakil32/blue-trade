@@ -22,7 +22,6 @@ const Sidebar = ({ setIsOpen, isOpen }) => {
 
   const closeSidebar = () => {
     setIsOpen(false);
-    console.log("hlk");
   };
 
   const sidebarRef = useDetectClickOutside({ onTriggered: closeSidebar });
@@ -49,16 +48,23 @@ const Sidebar = ({ setIsOpen, isOpen }) => {
         className="md:px-[40px] px-[30px] pb-[40px] xl:pt-[40px] h-full w-full overflow-y-auto "
       >
         <Link href="/">
-          <div className="dark:hidden block">
+          <div
+            onClick={() => setIsOpen(false)}
+            className="dark:hidden block select-none"
+          >
             <MainLogo />
           </div>
-          <div className="dark:block hidden ">
+          <div
+            onClick={() => setIsOpen(false)}
+            className="dark:block hidden  select-none"
+          >
             <MainLogoDarkSVG />
           </div>
         </Link>
 
         <Link href="/">
           <button
+            onClick={() => setIsOpen(false)}
             className={`${
               router.pathname == "/"
                 ? "bg-[#D5E6FB] dark:bg-[#062141] text-[#0060FF]"
@@ -75,6 +81,7 @@ const Sidebar = ({ setIsOpen, isOpen }) => {
 
         <Link href="/market" className="">
           <button
+            onClick={() => setIsOpen(false)}
             className={`${
               router.pathname == "/market"
                 ? "bg-[#D5E6FB] dark:bg-[#062141] text-[#0060FF]"
@@ -90,6 +97,7 @@ const Sidebar = ({ setIsOpen, isOpen }) => {
 
         <Link href="/transactions" className="">
           <button
+            onClick={() => setIsOpen(false)}
             className={`${
               router.pathname == "/transactions"
                 ? "bg-[#D5E6FB] dark:bg-[#062141] text-[#0060FF]"
@@ -114,6 +122,7 @@ const Sidebar = ({ setIsOpen, isOpen }) => {
 
         <Link href="/profile" className="">
           <button
+            onClick={() => setIsOpen(false)}
             className={`${
               router.pathname == "/profile"
                 ? "bg-[#D5E6FB] dark:bg-[#062141] text-[#0060FF]"
