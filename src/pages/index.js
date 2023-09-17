@@ -32,22 +32,34 @@ const Home = () => {
       {/* ===== bottom section ===== */}
 
       <div className="mt-5 grid grid-cols-12 gap-5">
-        <div className="col-span-7">
+        <div className="xl:col-span-7 lg:col-span-6 col-span-12">
           <CandleChart />
         </div>
-        <div className="col-span-5">
+        <div className="xl:col-span-5 lg:col-span-6 col-span-12">
           <Markets />
         </div>
       </div>
 
       <div className="grid grid-cols-12 items-center gap-6 mt-6">
-        <div data-aos="zoom-in" data-aos-delay="200" className="col-span-3">
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          className="lg:col-span-3 sm:col-span-6 col-span-12"
+        >
           <PieChart />
         </div>
-        <div data-aos="zoom-in" data-aos-delay="300" className="col-span-3">
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="300"
+          className="lg:col-span-3 sm:col-span-6 col-span-12"
+        >
           <Convert />
         </div>
-        <div data-aos="zoom-in" data-aos-delay="400" className="col-span-6">
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="400"
+          className="lg:col-span-6 col-span-12"
+        >
           <History />
         </div>
       </div>

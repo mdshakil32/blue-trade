@@ -9,8 +9,9 @@ const DarkModeButton = () => {
   useEffect(() => {
     isDarkMode ? setTheme("dark") : setTheme("light");
   }, [isDarkMode]);
+
   return (
-    <div className="">
+    <div className="bg-yellow-300 overflow-hidden">
       <DarkModeToggle onChange={setIsDarkMode} checked={isDarkMode} size={70} />
     </div>
   );

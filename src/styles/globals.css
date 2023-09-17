@@ -12,35 +12,15 @@ body {
   transform: unset;
 }
 
-.hamburger-menu {
-  width: 24px;
-  height: 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
-.hamburger-line {
-  width: 100%;
-  height: 2px;
-  background-color: white;
-  transition: transform 0.3s ease;
-}
-
-.active .hamburger-line:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-}
-
-.active .hamburger-line:nth-child(2) {
-  opacity: 0;
-}
-
-.active .hamburger-line:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
 /* ====== apex chart ======== */
+.hamburger-dropShadow {
+  filter: drop-shadow(0px 4px 45px rgba(0, 106, 255, 0.616));
+}
+@media only screen and (min-width: 1280px) {
+  .hamburger-dropShadow {
+    filter: drop-shadow(0px 0px 0px rgba(0, 106, 255, 0));
+  }
+}
 .dropShadow {
   filter: drop-shadow(0px 4px 45px rgba(0, 105, 255, 0.26));
 }
@@ -93,7 +73,7 @@ body {
 .line {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: #000;
+
   stroke-width: 5.5;
   stroke-linecap: round;
 }
@@ -215,7 +195,7 @@ body {
 }
 /* ==================== */
 
-.animated-btn-3 a {
+.animated-btn-3 button {
   font-weight: 700;
   border-radius: 5px;
   text-decoration: none;
@@ -225,7 +205,7 @@ body {
   background-color: #635bff;
 }
 
-.animated-btn-3 a:hover {
+.animated-btn-3 button:hover {
   box-shadow: 0px 0px 0px 2.5px #fff, 0px 0px 0px 5px #635bff,
     0px 0px 0px 10px white, 0px 0px 0px 10.5px #635bff;
   background: white;
@@ -242,4 +222,122 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+/* ================ dark mode toggle ======= */
+
+.toggle-switch {
+  width: 80px; /* Adjust the width */
+  height: 40px; /* Adjust the height */
+}
+#toggle_checkbox {
+  display: none;
+  user-select: none;
+}
+
+.toggle-label {
+  user-select: none;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 116px;
+  height: 45px;
+  margin: 0 auto;
+  background-color: #77b5fe;
+  border-radius: 56px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: 0.3s ease background-color;
+  overflow: hidden;
+}
+
+#star {
+  user-select: none;
+  position: absolute;
+  top: 8px;
+  left: 13px;
+  width: 30px;
+  height: 30px;
+  background-color: #fafd0f;
+  transform: scale(1);
+  border-radius: 50%;
+  transition: 0.3s ease top, 0.3s ease left, 0.3s ease transform,
+    0.3s ease background-color;
+  z-index: 1;
+}
+
+#star-1 {
+  user-select: none;
+  position: relative;
+}
+
+#star-2 {
+  user-select: none;
+  position: absolute;
+  transform: rotateZ(36deg);
+}
+
+.star {
+  user-select: none;
+  top: 0;
+  left: -7px;
+  font-size: 54px;
+  line-height: 28px;
+  color: #fafd0f;
+  transition: 0.3s ease color;
+}
+
+#moon {
+  user-select: none;
+  position: absolute;
+  bottom: -52px;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.3s ease bottom;
+}
+
+#moon:before {
+  user-select: none;
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -17px;
+  width: 40px;
+  height: 40px;
+  background-color: #03a9f4;
+  border-radius: 50%;
+  transition: 0.3s ease background-color;
+}
+
+#toggle_checkbox:checked + label {
+  user-select: none;
+  background-color: #002d67;
+}
+
+#toggle_checkbox:checked + label #star {
+  user-select: none;
+  top: 3px;
+  left: 64px;
+  transform: scale(0.3);
+  background-color: yellow;
+}
+
+#toggle_checkbox:checked + label .star {
+  user-select: none;
+  color: yellow;
+}
+
+#toggle_checkbox:checked + label #moon {
+  user-select: none;
+  bottom: 3px;
+}
+
+#toggle_checkbox:checked + label #moon:before {
+  user-select: none;
+  background-color: #002d67;
 }

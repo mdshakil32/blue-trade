@@ -14,7 +14,8 @@ const Topbar = dynamic(() => import("./Navigation/Topbar"), {
 });
 
 export default function Layout({ children }) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div
       style={inter.style}
@@ -22,9 +23,9 @@ export default function Layout({ children }) {
     >
       <Sidebar setIsOpen={setIsOpen} isOpen={isOpen} />
 
-      <main className={`${isOpen ? "ml-[307px]" : "ml-[307px]"}`}>
+      <main className={`xl:ml-[307px] `}>
         <Topbar />
-        <div className="py-6 px-10">{children}</div>
+        <div className="py-6 sm:px-10 px-3">{children}</div>
       </main>
     </div>
   );

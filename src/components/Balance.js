@@ -25,8 +25,8 @@ const SolanaLineChart = dynamic(() => import("./Charts/SolanaLineChart"), {
 
 const Balance = () => {
   return (
-    <div className="z-[10]">
-      <div className="grid 2xl:grid-cols-4 grid-cols-2 gap-6">
+    <div className="">
+      <div className="grid 2xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
         {/* ====== column 1 ===== */}
         <div
           data-aos="zoom-in"

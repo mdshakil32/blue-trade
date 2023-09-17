@@ -85,7 +85,7 @@ const Markets = () => {
         data-aos-delay="600"
         className="bg-white dark:bg-[#1C1C25]  rounded-xl p-5 min-h-[300px] overflow-hidden"
       >
-        <div className="flex items-center space-x-4">
+        <div className="sm:flex items-center sm:space-x-4">
           <h1 className=" text-xl font-semibold">Markets</h1>
 
           <div className="flex items-center flex-wrap">
@@ -97,7 +97,7 @@ const Markets = () => {
                   selectedMarket === name
                     ? "bg-[#F2F8FF]  dark:bg-[#131313] text-[#0060FF] "
                     : " bg-[#F8F8F9] dark:bg-[#131313]"
-                } m-1 text-xs font-semibold  px-2.5 py-1.5 rounded-lg  hover:bg-[#F2F8FF]  hover:text-[#0060FF] duration-200 select-none`}
+                } mr-1 my-1 text-xs font-semibold  px-2.5 py-1.5 rounded-lg  hover:bg-[#F2F8FF]  hover:text-[#0060FF] duration-200 select-none`}
               >
                 {name}
               </button>
