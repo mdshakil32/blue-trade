@@ -2,6 +2,8 @@ import React from "react";
 import GreenArrow from "./SVG/GreenArrow";
 import RedArrow from "./SVG/RedArrow";
 import ThreeDotButton from "./SVG/ThreeDotButton";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const History = () => {
   const historyData = [
@@ -34,14 +36,20 @@ const History = () => {
       isUp: false,
     },
   ];
+
+  const router = useRouter();
   return (
     <div>
       <div className="bg-white dark:bg-[#1C1C25]  rounded-xl px-5 pt-5 min-h-[300px]">
         <div className="flex items-start justify-between">
           <h1 className=" text-xl font-semibold">History</h1>
-          <button className="hover:dropShadow hover:bg-[#6b64fc] hover:text-white hover:border-[#6b64fc] duration-200 rounded-[6px] w-fit text-[10px] font-semibold px-2.5 py-1.5 border border-[#999999] text-[#999999] ">
-            View All
-          </button>
+          {router.pathname !== "/transactions" && (
+            <Link href="/transactions">
+              <button className="hover:dropShadow hover:bg-[#6b64fc] hover:text-white hover:border-[#6b64fc] duration-200 rounded-[6px] w-fit text-[10px] font-semibold px-2.5 py-1.5 border border-[#999999] text-[#999999] ">
+                View All
+              </button>
+            </Link>
+          )}
         </div>
 
         {historyData.map((item, index) => (

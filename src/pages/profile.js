@@ -24,7 +24,11 @@ const profile = () => {
         theme="light"
       />
 
-      <div className="container max-w-[600px]   bg-white dark:bg-[#1C1C25]  rounded-xl p-5">
+      <div
+        data-aos="zoom-out"
+        data-aos-delay="600"
+        className="container max-w-[600px]   bg-white dark:bg-[#1C1C25]  rounded-xl p-5"
+      >
         <UserProfile />
       </div>
     </div>

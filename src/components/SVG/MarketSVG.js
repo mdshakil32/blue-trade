@@ -1,10 +1,16 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 const MarketSVG = () => {
+  const router = useRouter();
   return (
     <div>
       <svg
-        className="group-hover:fill-[#0060FF] fill-black dark:fill-white"
+        className={`${
+          router.pathname == "/market"
+            ? "fill-[#0060FF]"
+            : "fill-black  dark:fill-white"
+        } group-hover:fill-[#0060FF] `}
         width="29"
         height="29"
         viewBox="0 0 29 29"

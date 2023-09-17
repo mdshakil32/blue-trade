@@ -1,10 +1,16 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 const TransactionSVG = () => {
+  const router = useRouter();
   return (
     <div>
       <svg
-        className="group-hover:fill-[#0060FF] fill-black dark:fill-white"
+        className={`${
+          router.pathname == "/transactions"
+            ? "fill-[#0060FF]"
+            : "fill-black  dark:fill-white"
+        } group-hover:fill-[#0060FF] `}
         width="29"
         height="29"
         viewBox="0 0 29 29"

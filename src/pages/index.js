@@ -36,7 +36,9 @@ const Home = () => {
           <CandleChart />
         </div>
         <div className="xl:col-span-5 lg:col-span-6 col-span-12">
-          <Markets />
+          <div data-aos="zoom-out" data-aos-delay="600">
+            <Markets />
+          </div>
         </div>
       </div>
 

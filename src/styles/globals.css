@@ -74,8 +74,8 @@ body {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
 
-  strokewidth: 5.5;
-  strokelinecap: round;
+  stroke-width: 5.5;
+  stroke-linecap: round;
 }
 
 .ham8 .top {
@@ -243,7 +243,7 @@ input[type="number"] {
   right: 0;
   left: 0;
   width: 116px;
-  height: 45px;
+  height: 35px;
   margin: 0 auto;
   background-color: #77b5fe;
   border-radius: 56px;
@@ -258,8 +258,8 @@ input[type="number"] {
   position: absolute;
   top: 8px;
   left: 13px;
-  width: 30px;
-  height: 30px;
+  width: 21px;
+  height: 21px;
   background-color: #fafd0f;
   transform: scale(1);
   border-radius: 50%;
@@ -281,10 +281,10 @@ input[type="number"] {
 
 .star {
   user-select: none;
-  top: 0;
-  left: -7px;
-  font-size: 54px;
-  line-height: 28px;
+  top: -1px;
+  left: -4px;
+  font-size: 35px;
+  line-height: 20px;
   color: #fafd0f;
   transition: 0.3s ease color;
 }
@@ -293,9 +293,9 @@ input[type="number"] {
   user-select: none;
   position: absolute;
   bottom: -52px;
-  right: 8px;
-  width: 40px;
-  height: 40px;
+  right: 10px;
+  width: 35px;
+  height: 32px;
   background-color: #fff;
   border-radius: 50%;
   transition: 0.3s ease bottom;
@@ -322,7 +322,7 @@ input[type="number"] {
 #toggle_checkbox:checked + label #star {
   user-select: none;
   top: 3px;
-  left: 64px;
+  left: 70px;
   transform: scale(0.3);
   background-color: yellow;
 }
@@ -363,7 +363,7 @@ input[type="number"] {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   /* background-color: #c9d1da; */
-  background-color: #fdd10e;
+  background-color: #0060ff1a;
   width: 8px;
   border-radius: 13px;
 }
@@ -371,5 +371,5 @@ input[type="number"] {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   /* background-color: #e6eef8; */
-  background-color: #f5dc6b;
+  background-color: #0060ff1a;
 }

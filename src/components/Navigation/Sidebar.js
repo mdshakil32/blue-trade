@@ -13,6 +13,7 @@ import MainLogoDarkSVG from "../SVG/MainLogoDarkSVG";
 
 import { useDetectClickOutside } from "react-detect-click-outside";
 import Hamburger from "../SVG/Hamburger";
+import { useRouter } from "next/router";
 
 const Sidebar = ({ setIsOpen, isOpen }) => {
   const toggle = () => {
@@ -26,6 +27,7 @@ const Sidebar = ({ setIsOpen, isOpen }) => {
 
   const sidebarRef = useDetectClickOutside({ onTriggered: closeSidebar });
 
+  const router = useRouter();
   return (
     <div
       ref={sidebarRef}
@@ -56,38 +58,84 @@ const Sidebar = ({ setIsOpen, isOpen }) => {
         </Link>
 
         <Link href="/">
-          <button className="mt-8 group flex items-center w-full py-2.5 px-6 space-x-3  hover:bg-[#D5E6FB] dark:hover:bg-[#062141] rounded-lg ">
-            <DashboardSVG className=" " />
+          <button
+            className={`${
+              router.pathname == "/"
+                ? "bg-[#D5E6FB] dark:bg-[#062141] text-[#0060FF]"
+                : "text-black dark:text-white"
+            } mt-8 group flex items-center w-full py-2.5 px-6 space-x-3  hover:bg-[#D5E6FB] dark:hover:bg-[#062141] rounded-lg hover:text-[#0060FF]`}
+          >
+            <DashboardSVG />
 
-            <p className="group-hover:text-[#0060FF] text-black dark:text-white text-lg font-medium">
+            <p className="group-hover:text-[#0060FF] text-lg font-medium">
               Dashboard
             </p>
           </button>
         </Link>
+
         <Link href="/market" className="">
-          <button className="mt-4 group flex items-center w-full py-2.5 px-6 space-x-3  hover:bg-[#D5E6FB] dark:hover:bg-[#062141] rounded-lg ">
+          <button
+            className={`${
+              router.pathname == "/market"
+                ? "bg-[#D5E6FB] dark:bg-[#062141] text-[#0060FF]"
+                : "text-black dark:text-white"
+            } mt-4 group flex items-center w-full py-2.5 px-6 space-x-3  hover:bg-[#D5E6FB] dark:hover:bg-[#062141] rounded-lg `}
+          >
             <MarketSVG />
-            <p className="group-hover:text-[#0060FF] text-black dark:text-white text-lg font-medium">
+            <p className="group-hover:text-[#0060FF] text-lg font-medium">
               Markets
             </p>
           </button>
         </Link>
-        <Link href="/">
+
+        <Link href="/transactions" className="">
+          <button
+            className={`${
+              router.pathname == "/transactions"
+                ? "bg-[#D5E6FB] dark:bg-[#062141] text-[#0060FF]"
+                : "text-black dark:text-white"
+            } mt-4 group flex items-center w-full py-2.5 px-6 space-x-3  hover:bg-[#D5E6FB] dark:hover:bg-[#062141] rounded-lg `}
+          >
+            <TransactionSVG />
+            <p className="group-hover:text-[#0060FF] text-lg font-medium">
+              Transactions
+            </p>
+          </button>
+        </Link>
+
+        {/* <Link href="/transactions">
           <button className="mt-4 group flex items-center w-full py-2.5 px-6 space-x-3 hover:bg-[#D5E6FB] dark:hover:bg-[#062141] rounded-lg ">
             <TransactionSVG />
             <p className="group-hover:text-[#0060FF] text-black dark:text-white text-lg font-medium">
               Transactions
             </p>
           </button>
+        </Link> */}
+
+        <Link href="/profile" className="">
+          <button
+            className={`${
+              router.pathname == "/profile"
+                ? "bg-[#D5E6FB] dark:bg-[#062141] text-[#0060FF]"
+                : "text-black dark:text-white"
+            } mt-4 group flex items-center w-full py-2.5 px-6 space-x-3  hover:bg-[#D5E6FB] dark:hover:bg-[#062141] rounded-lg `}
+          >
+            <ProfileSVG />
+            <p className="group-hover:text-[#0060FF] text-lg font-medium">
+              Profile
+            </p>
+          </button>
         </Link>
-        <Link href="/profile">
+
+        {/* <Link href="/profile">
           <button className="mt-4 group flex items-center w-full py-2.5 px-6 space-x-3 hover:bg-[#D5E6FB] dark:hover:bg-[#062141] rounded-lg ">
             <ProfileSVG />
             <p className="group-hover:text-[#0060FF] text-black dark:text-white text-lg font-medium">
               Profile
             </p>
           </button>
-        </Link>
+        </Link> */}
+
         <Link href="/">
           <button className="mt-4 group flex items-center w-full py-2.5 px-6 space-x-3 hover:bg-[#D5E6FB] dark:hover:bg-[#062141] rounded-lg ">
             <SettingsSVG />

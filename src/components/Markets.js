@@ -79,11 +79,7 @@ const Markets = () => {
 
   return (
     <div>
-      <div
-        data-aos="zoom-out"
-        data-aos-delay="600"
-        className="bg-white dark:bg-[#1C1C25]  rounded-xl p-5 min-h-[300px] overflow-hidden"
-      >
+      <div className="bg-white dark:bg-[#1C1C25]  rounded-xl p-5 min-h-[300px] overflow-hidden">
         <div className="sm:flex items-center sm:space-x-4">
           <h1 className=" text-xl font-semibold">Markets</h1>
 
