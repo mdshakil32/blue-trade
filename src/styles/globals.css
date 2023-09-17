@@ -74,8 +74,8 @@ body {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
 
-  stroke-width: 5.5;
-  stroke-linecap: round;
+  strokewidth: 5.5;
+  strokelinecap: round;
 }
 
 .ham8 .top {
@@ -340,4 +340,36 @@ input[type="number"] {
 #toggle_checkbox:checked + label #moon:before {
   user-select: none;
   background-color: #002d67;
+}
+
+/* ========= scrollbar =========  */
+
+/* Firefox */
+/* Designing for scroll-bar */
+/* width */
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  border-radius: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #f8f8fa;
+  /* box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05); */
+  border-radius: 13px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background-color: #c9d1da; */
+  background-color: #fdd10e;
+  width: 8px;
+  border-radius: 13px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  /* background-color: #e6eef8; */
+  background-color: #f5dc6b;
 }

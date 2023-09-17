@@ -25,7 +25,7 @@ import Topbar from "@/components/Navigation/Topbar";
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       {/* ===== top section ===== */}
 
       <Balance />

@@ -16,14 +16,14 @@ const GreenArrow = () => {
           r="11.5"
           transform="rotate(180 12.4854 12)"
           fill="#219653"
-          fill-opacity="0.2"
+          fillOpacity="0.2"
         />
         <path
           d="M12.7485 6.51313V16.7354M12.7485 16.7354L17.2207 12.2631M12.7485 16.7354L8.27626 12.2631"
           stroke="#219653"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </div>

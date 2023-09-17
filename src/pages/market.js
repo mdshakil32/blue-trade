@@ -5,7 +5,7 @@ import Markets from "@/components/Markets";
 
 const market = () => {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <div className=" grid grid-cols-12">
         <div className="col-span-1"></div>
         <div className="col-span-10">
