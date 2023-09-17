@@ -329,7 +329,7 @@ const CandleChart = () => {
     >
       <div className="grid md:grid-cols-2 grid-cols-1">
         <div>
-          <div className="max-w-[330px] px-4 py-2 dark:bg-[#131313] bg-[#F2F8FF] rounded-xl  grid grid-cols-2">
+          <div className="select-none cursor-pointer hover:bg-[#D5E6FB] dark:hover:bg-[#062141] max-w-[330px] px-4 py-2 dark:bg-[#131313] bg-[#F2F8FF] rounded-xl  grid grid-cols-2">
             <div>
               <h1 className=" text-xl font-semibold dropShadow">BTCUSDT</h1>
               <p className=" text-[13px] text-[#626D7D] font-medium">Bitcoin</p>
